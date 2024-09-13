@@ -27,6 +27,16 @@ def main():
     # Call a function with an optional argument
     bake_cookie(ingredients_list, snickerdoodle, temp, cutter="star")
 
+    # Reviewing optional keyword arguments
+    print(calculate_numbers(2, 3)) # goes with default, "add"
+    print(calculate_numbers(2,3,"subtract")) 
+    print(calculate_numbers(2,3,operation="subtract")) # specify keyword
+
+    # Demonstrate modifying values while iterating
+    # Note that you can mix data types in the same list!!!!!!!
+    numbers = [5, 5, 6, 5.5, 7, 42, 70, "hi"]
+    list_iteration(numbers)
+
 
 def bake_cookie(ingredients, instructions, temperature, cutter="circle"):
 
@@ -40,6 +50,26 @@ def bake_cookie(ingredients, instructions, temperature, cutter="circle"):
     print(instructions, end="\n \n") # use optional keyword arg for line break
     # Tell them which cookie cutter to use
     print(f"Now use a {cutter} cookie cutter")
+
+def calculate_numbers(x, y, operation="add"):
+    if operation == "add":
+        return x + y
+    # elif means ELSE IF
+    elif operation == "subtract":
+        return x - y 
+
+# Different ways to modify values while iterating
+def list_iteration(input_list):
+    # 1. Create a new list as you loop
+    new_list = []
+    for item in input_list:
+        new_list.append(item * 2)
+    print(new_list)
+
+    # 2. LIST COMPREHENSION
+    input_list = [item * 2 for item in input_list]
+    print(input_list)
+
 
 
 if __name__ == "__main__":

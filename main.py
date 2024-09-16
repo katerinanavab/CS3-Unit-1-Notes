@@ -37,6 +37,51 @@ def main():
     numbers = [5, 5, 6, 5.5, 7, 42, 70, "hi"]
     list_iteration(numbers)
 
+    # Test different container types
+    list_demo()
+    tuple_demo()
+    set_demo()
+    dict_demo()
+
+
+def list_demo():
+    print("***LIST DEMO***")
+    my_list = ["h", "e", "l", "l", "o"]
+
+    # Add an item to list
+    my_list.append("!")
+    print(my_list)
+
+    # Get the number of items
+    print(len(my_list))
+
+    # Use index to access specific item 
+    print(my_list[0])
+    print(my_list[4:6]) # item at index 4 (inclusive) until 6 (excluded)
+    print(my_list[4:]) # item at 4 until the end
+    # NEGATIVE INDEX is located from the end, back 2 spots
+    print(my_list[-2:]) # item at 4 until the end
+
+    # Remove the first 'l'
+    my_list.remove("l")
+    # Insert an item at a index
+    my_list.insert(1,"l")
+    print(my_list)
+
+
+
+
+
+def tuple_demo():
+    print("***TUPLE DEMO***")
+
+def set_demo():
+    print("***SET DEMO***")
+
+def dict_demo():
+    print("***DICTIONARY DEMO***")
+
+
 
 def bake_cookie(ingredients, instructions, temperature, cutter="circle"):
 

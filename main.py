@@ -68,15 +68,44 @@ def list_demo():
     my_list.insert(1,"l")
     print(my_list)
 
+    # Check if a certain value exists in a list
+    # x in sequence - boolean expression
+    print("!" in my_list)
 
-
-
+    # Sort our list in reverse order
+    # order meaning "alphabetical"
+    my_list.sort(reverse=True)
+    print(my_list)
 
 def tuple_demo():
     print("***TUPLE DEMO***")
+    # Tuples are IMMUTABLE
+    person = ('Courtney', 17, 'Brooklyn, NY')
+    name, age, hometown = person
+    # created multiple variables in one line
+    print(name)
+    print(age)
+    print(hometown)
+
 
 def set_demo():
     print("***SET DEMO***")
+    my_set = set()
+    my_set = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+    # SETS are MUTABLE 
+    my_set.add(0) # will insert in ORDER!
+    my_set.remove(4)
+    print(my_set)
+    # Sets can only contain UNIQUE values
+    my_set.add(8)
+    print(my_set)
+
+    # Useful math operations between two sets
+    other_set = {2, 4, 6, 8, 10}
+    print(my_set.union(other_set))
+    print(my_set.intersection(other_set))
+    print(my_set.difference(other_set))
+
 
 def dict_demo():
     print("***DICTIONARY DEMO***")

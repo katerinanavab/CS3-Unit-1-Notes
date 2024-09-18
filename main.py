@@ -109,6 +109,31 @@ def set_demo():
 
 def dict_demo():
     print("***DICTIONARY DEMO***")
+    # Create a dictionary with values (each key has its own dict)
+    # { key: value, key: value, key: value}
+    costumes = { 
+        'M&M': { 'pop %': 0.4, 'school OK': True, 'items': ['suit', 'white tights'] },
+        'cat': { 'pop %': 0.95, 'school OK': 'maybe', 'items': ['cat ears'] },
+        'jorge': { 'school OK': False, 'items': ['clown hammer'] }         
+    }
+
+    # How to print dictionaries
+    print(costumes) # preserves { structure }
+    print(costumes.items())
+    print(costumes.values()) 
+    print(costumes.keys()) # returns a LIST of the keys (outer one only)
+
+    # How to access items
+    print(costumes["jorge"])
+    print(costumes.get("cat"))
+    print(costumes["Mr. Titcomb"]) # gives error if key doesn't exist
+
+    
+
+
+
+
+
 
 
 
